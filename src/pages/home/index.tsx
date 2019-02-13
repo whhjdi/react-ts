@@ -76,7 +76,7 @@ class Home extends React.Component<IProps, IState> {
 					<div className="text">沐雪</div>
 				</div>
 				<div className="other">
-					<a href="">
+					<a href="https://github.com/whhjdi/react-ts">
 						<svg className="icon" aria-hidden="true">
 							<use xlinkHref="#icon-github-fill" />
 						</svg>
