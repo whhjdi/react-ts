@@ -35,11 +35,10 @@ class Home extends React.Component<IProps, IState> {
 				appear={true}
 			>
 				<Aside className="aside">
-					<div className="title">
-						<img src="" alt="" />
-						<div className="name" onClick={this.handleAside}>
-							隐藏
-						</div>
+					<div className="close">
+						<svg className="icon" aria-hidden="true" onClick={this.handleAside}>
+							<use xlinkHref="#icon-close" />
+						</svg>
 					</div>
 					<ul className="list">
 						<li className="item">
@@ -62,25 +61,38 @@ class Home extends React.Component<IProps, IState> {
 			</CSSTransition>
 		);
 	};
-	renderMenu = () => {
-		if (!this.state.show) {
-			return (
-				<div onClick={this.handleAside} className="menu">
-					菜单
+	renderHeader() {
+		return (
+			<div className="menu">
+				<div className="submenu">
+					<svg className="icon" aria-hidden="true" onClick={this.handleAside}>
+						<use xlinkHref="#icon-menu" />
+					</svg>
+					<img
+						src="https://i.loli.net/2019/01/26/5c4bd425a1128.jpeg"
+						alt=""
+						className="title-img"
+					/>
+					<div className="text">沐雪</div>
 				</div>
-			);
-		}
-		return null;
-	};
+				<div className="other">
+					<a href="">
+						<svg className="icon" aria-hidden="true">
+							<use xlinkHref="#icon-github-fill" />
+						</svg>
+					</a>
+				</div>
+			</div>
+		);
+	}
 	render() {
 		return (
 			<Router>
 				<Layout className="layout" dir="vertical">
-					<Header className="header" />
+					<Header className="header">{this.renderHeader()}</Header>
 
 					<Layout className="content">
 						{this.renderAside()}
-						{this.renderMenu()}
 						<Main className="main">
 							<Route exact path="/layout" component={LayoutExample} />
 							<Route exact path="/grid" component={GridExample} />

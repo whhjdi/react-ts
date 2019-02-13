@@ -4,8 +4,9 @@
   .item {
     display: inline-block;
     border: 1px solid rgb(128, 128, 128);
+    color: rgb(14, 12, 12);
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 22px;
     min-width: 35px;
     height: 100%;
@@ -32,6 +33,7 @@
     &.disabled {
       color: rgba(0, 0, 0, 0.25);
       border-color: #ddd;
+      cursor: not-allowed;
     }
   }
 }

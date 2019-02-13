@@ -8,7 +8,11 @@ function PaginationExample(props: any) {
 	};
 	return (
 		<div>
+			<h1>分页组件</h1>
+			<h2>基本用法</h2>
 			<Pagination totalPage={5} onChange={onClickPage} />
+			<h2>更多页码</h2>
+			<span>todo</span>
 		</div>
 	);
 }

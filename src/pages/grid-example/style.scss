@@ -5,11 +5,17 @@
   background: #eee;
 
   >:nth-child(odd) {
-    background: #56BDEF;
+    .col {
+
+      background: #56BDEF;
+    }
   }
 
   >:nth-child(even) {
-    background: #03A0E9;
+    .col {
+
+      background: #03A0E9;
+    }
   }
 
   .col {
@@ -18,14 +24,17 @@
   }
 
   .col1 {
+    background: #56BDEF;
     height: 40px;
   }
 
   .col2 {
+    background: #03A0E9;
     height: 80px;
   }
 
   .col3 {
+    background: #56BDEF;
     height: 100px;
   }
 }
