@@ -8,7 +8,12 @@ import {
 	Footer,
 	Main
 } from "../../components/layout/index";
-import { HashRouter as Router, Route, NavLink } from "react-router-dom";
+import {
+	HashRouter as Router,
+	Route,
+	NavLink,
+	Redirect
+} from "react-router-dom";
 import LayoutExample from "../layout-example/index";
 import GridExample from "../grid-example/index";
 import PaginationExample from "../pagination-example/index";
@@ -94,6 +99,7 @@ class Home extends React.Component<IProps, IState> {
 					<Layout className="content">
 						{this.renderAside()}
 						<Main className="main">
+							<Route exact path="/" render={() => <Redirect to="/layout" />} />
 							<Route exact path="/layout" component={LayoutExample} />
 							<Route exact path="/grid" component={GridExample} />
 							<Route exact path="/pagination" component={PaginationExample} />
