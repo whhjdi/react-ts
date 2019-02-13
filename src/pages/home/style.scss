@@ -1,0 +1,107 @@
+.layout {
+  width: 100%;
+  height: 100%;
+
+  .header {
+    height: 52px;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    background: #fff;
+  }
+
+  .content {
+
+    .aside {
+      width: 250px;
+      border-right: 1px solid #ddd;
+      padding: 20px 10px;
+      background: #1A304D;
+      color: #fff;
+
+      &.fade-enter,
+      &.fade-appear {
+        transform: translateX(-100%)
+      }
+
+      &.fade-enter-active,
+      &.fade-appear-active {
+        transform: translateX(0%);
+        transition: all 300ms ease-in;
+      }
+
+      &.fade-enter-done {
+        transform: translateX(0%);
+      }
+
+      &.fade-exit {
+        transform: translateX(0%)
+      }
+
+      &.fade-exit-active {
+        transform: translateX(-100%);
+        transition: all 300ms ease-out;
+      }
+
+      &.fade-exit-done {
+        transform: translateX(-100%)
+      }
+
+      .title {}
+
+      .list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        list-style: none;
+
+        .item {
+          padding: 10px;
+
+          a {
+            color: #fff;
+            text-decoration: none;
+
+            &.selected {
+              color: #E65F7F;
+
+            }
+          }
+        }
+      }
+    }
+
+    .menu {
+      position: fixed;
+      top: 20%;
+      background: #E65F7F;
+      padding: 10px;
+      color: #fff;
+    }
+
+    .main {
+      padding: 10px 50px;
+      overflow-y: scroll;
+      background: #FBF7F8;
+
+    }
+  }
+
+  .footer {
+    text-align: center;
+    padding: 10px;
+    background: rgb(33, 224, 180);
+    color: #fff;
+
+    a {
+      color: #E65F7F;
+      font-weight: bold;
+
+      &:hover {
+        color: #F3C040;
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.layout {
+  width: 100%;
+  height: 100%; }
+  .layout .header {
+    height: 52px;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    background: #fff; }
+  .layout .content .aside {
+    width: 250px;
+    border-right: 1px solid #ddd;
+    padding: 20px 10px;
+    background: #1A304D;
+    color: #fff; }
+    .layout .content .aside.fade-enter, .layout .content .aside.fade-appear {
+      transform: translateX(-100%); }
+    .layout .content .aside.fade-enter-active, .layout .content .aside.fade-appear-active {
+      transform: translateX(0%);
+      transition: all 300ms ease-in; }
+    .layout .content .aside.fade-enter-done {
+      transform: translateX(0%); }
+    .layout .content .aside.fade-exit {
+      transform: translateX(0%); }
+    .layout .content .aside.fade-exit-active {
+      transform: translateX(-100%);
+      transition: all 300ms ease-out; }
+    .layout .content .aside.fade-exit-done {
+      transform: translateX(-100%); }
+    .layout .content .aside .list {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      list-style: none; }
+      .layout .content .aside .list .item {
+        padding: 10px; }
+        .layout .content .aside .list .item a {
+          color: #fff;
+          text-decoration: none; }
+          .layout .content .aside .list .item a.selected {
+            color: #E65F7F; }
+  .layout .content .menu {
+    position: fixed;
+    top: 20%;
+    background: #E65F7F;
+    padding: 10px;
+    color: #fff; }
+  .layout .content .main {
+    padding: 10px 50px;
+    overflow-y: scroll;
+    background: #FBF7F8; }
+  .layout .footer {
+    text-align: center;
+    padding: 10px;
+    background: #21e0b4;
+    color: #fff; }
+    .layout .footer a {
+      color: #E65F7F;
+      font-weight: bold; }
+      .layout .footer a:hover {
+        color: #F3C040; }
