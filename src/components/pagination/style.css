@@ -20,7 +20,8 @@
     .z-pagination .item:hover {
       border-color: #F3C040; }
     .z-pagination .item.active {
-      border-color: #03A0E9; }
+      border-color: #03A0E9;
+      color: #03A0E9; }
     .z-pagination .item.disabled {
       color: rgba(0, 0, 0, 0.25);
       border-color: #ddd;

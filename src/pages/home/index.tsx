@@ -17,6 +17,7 @@ import {
 import LayoutExample from "../layout-example/index";
 import GridExample from "../grid-example/index";
 import PaginationExample from "../pagination-example/index";
+import SlidesExample from "../slides-example";
 interface IProps {}
 interface IState {
 	show: boolean;
@@ -61,6 +62,11 @@ class Home extends React.Component<IProps, IState> {
 								Pagination 分页
 							</NavLink>
 						</li>
+						<li className="item">
+							<NavLink to="/slides" activeClassName="selected">
+								Slides 轮播
+							</NavLink>
+						</li>
 					</ul>
 				</Aside>
 			</CSSTransition>
@@ -103,6 +109,7 @@ class Home extends React.Component<IProps, IState> {
 							<Route exact path="/layout" component={LayoutExample} />
 							<Route exact path="/grid" component={GridExample} />
 							<Route exact path="/pagination" component={PaginationExample} />
+							<Route exact path="/slides" component={SlidesExample} />
 						</Main>
 					</Layout>
 					<Footer className="footer">
