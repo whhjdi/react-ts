@@ -72,8 +72,6 @@ class Slides extends React.Component<IProps, IState> {
 		}
 	};
 	setTransition(n: number) {
-		console.log(n, this.state.hasTransition);
-
 		if (this.state.hasTransition) {
 			this.containerRef.style.transition = `transform ${this.props.speed}ms`;
 		} else {
@@ -111,14 +109,11 @@ class Slides extends React.Component<IProps, IState> {
 		}
 	};
 	goto(n: number) {
-		console.log("调用了goto");
 		if (!this.state.hasTransition) {
 			this.setState({
 				hasTransition: true
 			});
 		}
-
-		console.log(12, this.state.hasTransition);
 
 		this.prevIndex = this.state.currentIndex;
 		this.setState({

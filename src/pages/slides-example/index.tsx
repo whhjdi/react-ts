@@ -12,13 +12,6 @@ export default function SlidesExample(props: any) {
 				<div className="item3 item">3</div>
 				<div className="item4 item">4</div>
 			</Slides>
-			{/* <h2>垂直滚动</h2>
-			<Slides autoPlay={true} className="slides2">
-				<div className="item1 item">1</div>
-				<div className="item2 item">2</div>
-				<div className="item3 item">3</div>
-				<div className="item4 item">4</div>
-			</Slides> */}
 		</div>
 	);
 }
