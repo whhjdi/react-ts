@@ -33,16 +33,22 @@ export default class ProgressExample extends React.Component<{}, IState> {
 				<h1>进度条组件</h1>
 				<h2>长方形进度条</h2>
 				<h3>基础用法</h3>
-				<Progress strokeWidth={8} percent={PERCENT}>
+				<Progress strokeWidth={8} percent={PERCENT} className="line-progress">
 					<span>{PERCENT}</span>
 				</Progress>
-				<Progress strokeWidth={8} percent={PERCENT} backgroundColor="#4ACBAC">
+				<Progress
+					strokeWidth={8}
+					percent={PERCENT}
+					backgroundColor="#4ACBAC"
+					className="line-progress"
+				>
 					<span>{PERCENT}</span>
 				</Progress>
 				<Progress
 					strokeWidth={8}
 					percent={this.state.percent}
 					backgroundColor="#F3C040"
+					className="line-progress"
 				>
 					<span>{this.state.percent}</span>
 				</Progress>

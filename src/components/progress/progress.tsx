@@ -24,6 +24,7 @@ class Progress extends React.Component<IProps, IState> {
 	};
 	renderProgress() {
 		const {
+			className,
 			type,
 			strokeWidth,
 			backgroundColor,
@@ -33,6 +34,7 @@ class Progress extends React.Component<IProps, IState> {
 		if (type === "line") {
 			return (
 				<Line
+					className={className}
 					strokeWidth={strokeWidth}
 					percent={validProgress(percent)}
 					backgroundColor={backgroundColor}

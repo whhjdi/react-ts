@@ -24,7 +24,7 @@ const Line: React.SFC<LineProps> = props => {
 	};
 
 	return (
-		<div className="z-progress-container">
+		<div className={cs("z-progress-container", className)}>
 			<div className="z-progress-outer">
 				<div
 					className="z-progress-inner"
@@ -33,7 +33,7 @@ const Line: React.SFC<LineProps> = props => {
 					<div
 						style={percentStyle}
 						{...rest}
-						className={cs("z-progress-content", className)}
+						className={"z-progress-content"}
 					/>
 				</div>
 			</div>
