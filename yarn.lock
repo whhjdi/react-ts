@@ -55,6 +55,13 @@
   resolved "http://registry.npm.taobao.org/@types/prop-types/download/@types/prop-types-15.5.8.tgz#8ae4e0ea205fe95c3901a5a1df7f66495e3a56ce"
   integrity sha1-iuTg6iBf6Vw5AaWh339mSV46Vs4=
 
+"@types/rc-progress@^2.2.1":
+  version "2.2.1"
+  resolved "http://registry.npm.taobao.org/@types/rc-progress/download/@types/rc-progress-2.2.1.tgz#a39693cb395ee191dd51e2a15691cd0f4ea8cb58"
+  integrity sha1-o5aTyzle4ZHdUeKhVpHND06oy1g=
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-dom@^16.8.0":
   version "16.8.0"
   resolved "http://registry.npm.taobao.org/@types/react-dom/download/@types/react-dom-16.8.0.tgz#c565f43f9d2ec911f9e0b8f3b74e25e67879aa3f"
@@ -1176,7 +1183,7 @@ babel-register@^6.26.0:
     mkdirp "^0.5.1"
     source-map-support "^0.4.15"
 
-babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.26.0, babel-runtime@^6.9.2:
+babel-runtime@6.x, babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.26.0, babel-runtime@^6.9.2:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   integrity sha1-llxwWGaOgrVde/4E/yM3vItWR/4=
@@ -6770,6 +6777,15 @@ promise@8.0.1:
   dependencies:
     asap "~2.0.3"
 
+prop-types@^15.5.8:
+  version "15.7.2"
+  resolved "http://registry.npm.taobao.org/prop-types/download/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
+  integrity sha1-UsQedbjIfnK52TYOAga5ncv/psU=
+  dependencies:
+    loose-envify "^1.4.0"
+    object-assign "^4.1.1"
+    react-is "^16.8.1"
+
 prop-types@^15.6.1, prop-types@^15.6.2:
   version "15.7.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.1.tgz#2fa61e0a699d428b40320127733ee2931f05d9d1"
@@ -6923,6 +6939,14 @@ raw-body@2.3.3:
     http-errors "1.6.3"
     iconv-lite "0.4.23"
     unpipe "1.0.0"
+
+rc-progress@^2.3.0:
+  version "2.3.0"
+  resolved "http://registry.npm.taobao.org/rc-progress/download/rc-progress-2.3.0.tgz#cfbd07ff9026c450100980de209a92650e24f313"
+  integrity sha1-z70H/5AmxFAQCYDeIJqSZQ4k8xM=
+  dependencies:
+    babel-runtime "6.x"
+    prop-types "^15.5.8"
 
 rc@^1.0.1, rc@^1.1.6, rc@^1.2.7:
   version "1.2.8"
