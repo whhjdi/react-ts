@@ -13,7 +13,8 @@
     transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    cursor: pointer; }
     .z-slides .z-dot:last-child {
       margin-right: 0; }
     .z-slides .z-dot .z-dot-item {
@@ -30,7 +31,8 @@
   .z-slides .z-control {
     position: absolute;
     padding: 4px;
-    background: rgba(0, 0, 0, 0.2); }
+    background: rgba(0, 0, 0, 0.2);
+    cursor: pointer; }
     .z-slides .z-control:hover {
       background: rgba(255, 255, 255, 0.6); }
       .z-slides .z-control:hover .icon {
