@@ -3,7 +3,8 @@ import cs from "classnames";
 interface IProps extends IStyledProps {
 	size?: "small" | "big";
 	shape?: "rect" | "circle";
-	type?: "default" | "danger" | "primary" | "success";
+	color?: "default" | "danger" | "primary" | "success";
+	type?: "button" | "submit" | "reset";
 	href?: string;
 	target?: string;
 	disabled?: boolean;
@@ -15,12 +16,13 @@ const Button: React.SFC<IProps> = props => {
 		children,
 		style,
 		disabled,
-		type,
+		color,
 		shape,
 		className,
 		size,
 		onClick,
-		target
+		target,
+		type
 	} = props;
 	const onclick = (e: React.MouseEvent) => {
 		if (disabled) {
@@ -34,7 +36,7 @@ const Button: React.SFC<IProps> = props => {
 		<a
 			href={href}
 			style={style}
-			className={cs(componentName, type, size, shape, className)}
+			className={cs(componentName, color, size, shape, className)}
 			onClick={onclick}
 			target={target}
 		>
@@ -43,9 +45,10 @@ const Button: React.SFC<IProps> = props => {
 	) : (
 		<button
 			style={style}
-			className={cs(componentName, type, shape, size, { disabled }, className)}
+			className={cs(componentName, color, shape, size, { disabled }, className)}
 			disabled={disabled}
 			onClick={onclick}
+			type={type}
 		>
 			{content}
 		</button>
@@ -54,9 +57,10 @@ const Button: React.SFC<IProps> = props => {
 };
 Button.defaultProps = {
 	size: "small",
-	type: "default",
+	color: "default",
 	shape: "rect",
-	target: "_blank"
+	target: "_blank",
+	type: "button"
 };
 const componentName = "z-button";
 export default Button;

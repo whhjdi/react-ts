@@ -10,18 +10,18 @@ function ButtonExample(props: any) {
 			<h1>按钮组件</h1>
 			<h2>基本用法</h2>
 			<Button>默认按钮</Button>
-			<Button type="danger">Danger</Button>
-			<Button type="primary">Primary</Button>
-			<Button type="success">Success</Button>
+			<Button color="danger">Danger</Button>
+			<Button color="primary">Primary</Button>
+			<Button color="success">Success</Button>
 			<br />
 			<Button shape="circle">默认按钮</Button>
-			<Button type="danger" shape="circle">
+			<Button color="danger" shape="circle">
 				Danger
 			</Button>
-			<Button type="primary" shape="circle">
+			<Button color="primary" shape="circle">
 				Primary
 			</Button>
-			<Button type="success" shape="circle">
+			<Button color="success" shape="circle">
 				Success
 			</Button>
 			<h2>其他用法</h2>
@@ -32,17 +32,20 @@ function ButtonExample(props: any) {
 			</Button>
 			<h3>size</h3>
 			<Button size="big">大按钮</Button>
-			<Button type="danger" size="big">
+			<Button color="danger" size="big">
 				Danger
 			</Button>
-			<Button type="primary" size="big">
+			<Button color="primary" size="big">
 				Primary
 			</Button>
-			<Button type="success" size="big">
+			<Button color="success" size="big">
 				Success
 			</Button>
 			<h3>click事件</h3>
-			<Button onClick={handleClick}>click</Button>
+			<Button onClick={handleClick}>Click</Button>
+			<Button onClick={handleClick} disabled={true}>
+				不可点击
+			</Button>
 			<h3>跳转</h3>
 			<Button href="https://wanghandi.top" target="newWindow">
 				跳转
