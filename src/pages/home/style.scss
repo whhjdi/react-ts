@@ -65,6 +65,7 @@
       background: #1A304D;
       color: #fff;
       position: relative;
+      flex-shrink: 0;
 
       &.fade-enter,
       &.fade-appear {

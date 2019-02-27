@@ -43,7 +43,8 @@
     padding: 20px 10px;
     background: #1A304D;
     color: #fff;
-    position: relative; }
+    position: relative;
+    flex-shrink: 0; }
     .layout .content .aside.fade-enter, .layout .content .aside.fade-appear {
       transform: translateX(-100%); }
     .layout .content .aside.fade-enter-active, .layout .content .aside.fade-appear-active {

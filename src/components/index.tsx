@@ -6,5 +6,3 @@ declare global {
 		style?: CSSProperties;
 	}
 }
-
-export { Layout } from "./layout/index";

@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Progress } from "../../components/progress/index";
+import { Button } from "../../components/button/index";
 import "./style.css";
 const PERCENT = 30;
 interface IState {
@@ -53,8 +54,8 @@ export default class ProgressExample extends React.Component<{}, IState> {
 					<span>{this.state.percent}</span>
 				</Progress>
 				<div className="button-wrapper">
-					<button onClick={this.decrease}>减少10</button>
-					<button onClick={this.increase}>增加10</button>
+					<Button onClick={this.decrease}>减少10</Button>
+					<Button onClick={this.increase}>增加10</Button>
 				</div>
 				<h2>圆形进度条</h2>
 				<h3>基础用法</h3>
@@ -89,8 +90,8 @@ export default class ProgressExample extends React.Component<{}, IState> {
 						<span>{this.state.percent}</span>
 					</Progress>
 					<div className="button-wrapper">
-						<button onClick={this.decrease}>减少10</button>
-						<button onClick={this.increase}>增加10</button>
+						<Button onClick={this.decrease}>减少10</Button>
+						<Button onClick={this.increase}>增加10</Button>
 					</div>
 				</div>
 			</div>

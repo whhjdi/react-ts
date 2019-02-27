@@ -14,6 +14,7 @@ import {
 	NavLink,
 	Redirect
 } from "react-router-dom";
+import ButtonExample from "../button-example";
 import LayoutExample from "../layout-example/index";
 import GridExample from "../grid-example/index";
 import PaginationExample from "../pagination-example/index";
@@ -48,6 +49,11 @@ class Home extends React.Component<IProps, IState> {
 						</svg>
 					</div>
 					<ul className="list">
+						<li className="item">
+							<NavLink to="/button" activeClassName="selected">
+								Button 按钮
+							</NavLink>
+						</li>
 						<li className="item">
 							<NavLink to="/layout" activeClassName="selected">
 								Layout 布局
@@ -111,7 +117,8 @@ class Home extends React.Component<IProps, IState> {
 					<Layout className="content">
 						{this.renderAside()}
 						<Main className="main">
-							<Route exact path="/" render={() => <Redirect to="/layout" />} />
+							<Route exact path="/" render={() => <Redirect to="/button" />} />
+							<Route exact path="/button" component={ButtonExample} />
 							<Route exact path="/layout" component={LayoutExample} />
 							<Route exact path="/grid" component={GridExample} />
 							<Route exact path="/pagination" component={PaginationExample} />
